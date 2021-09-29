@@ -2,7 +2,7 @@
 
 from .util import _delete_pair, _match_pair
 
-
+print('test')
 def _unmatch_pair(suitor, reviewer):
     """ Unmatch a (suitor, reviewer) pair. """
 
@@ -36,8 +36,8 @@ def stable_marriage(suitors, reviewers, optimal="suitor"):
 
     if optimal.lower() == "reviewer":
         suitors, reviewers = reviewers, suitors
-
     free_suitors = suitors[:]
+    print(free_suitors)
     while free_suitors:
 
         suitor = free_suitors.pop()
