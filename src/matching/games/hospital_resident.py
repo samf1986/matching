@@ -77,8 +77,6 @@ class HospitalResident(BaseGame):
             resident_prefs, hospital_prefs, capacities
         )
         game = cls(residents, hospitals, clean)
-        print(hospitals)
-        print(residents)
         return game
 
     def solve(self, optimal="resident"):
