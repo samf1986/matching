@@ -73,13 +73,14 @@ def resident_optimal(residents, hospitals):
 
         4. Go to 1 until there are no such residents left, then end.
     """
-
+    
     free_residents = residents[:]
+   print('Students' , free_residents ,' are unmatched')
     while free_residents:
 
         resident = free_residents.pop()
         hospital = resident.get_favourite()
-
+        print('Student ' , resident ,' prefers ', hospital, ' among the remaining faculty')
         if len(hospital.matching) == hospital.capacity:
             worst = hospital.get_worst_match()
             _unmatch_pair(worst, hospital)
