@@ -84,7 +84,6 @@ def resident_optimal(residents, hospitals):
         print('Student ' , resident ,' prefers ', hospital, ' among the remaining faculty')
         if len(hospital.matching) == hospital.capacity:
             worst = hospital.get_worst_match()
-            print(hospital ,' is over capacity and drops their least preferred current match, ', worst )
             _unmatch_pair(worst, hospital)
             free_residents.append(worst)
         _match_pair(resident, hospital)
