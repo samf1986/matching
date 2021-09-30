@@ -75,7 +75,7 @@ def resident_optimal(residents, hospitals):
     """
     
     free_residents = residents[:]
-   print('Students' , free_residents ,' are unmatched')
+    print('Students' , free_residents ,' are unmatched')
     while free_residents:
 
         resident = free_residents.pop()
