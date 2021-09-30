@@ -79,7 +79,7 @@ def resident_optimal(residents, hospitals):
     while free_residents:
 
         resident = free_residents.pop()
-        print('Students' , free_residents ,' are unmatched')
+        
         hospital = resident.get_favourite()
         print('Student ' , resident ,' prefers ', hospital, ' among the remaining faculty')
         if len(hospital.matching) == hospital.capacity:
@@ -87,11 +87,11 @@ def resident_optimal(residents, hospitals):
             print(hospital ,' is over capacity and drops their least preferred current match, ', worst )
             _unmatch_pair(worst, hospital)
             free_residents.append(worst)
-
         _match_pair(resident, hospital)
 
         if len(hospital.matching) == hospital.capacity:
             successors = hospital.get_successors()
+            print(hospital , ' is at capacity and rejects their least preferred potential matches, ', successors )
             for successor in successors:
                 _delete_pair(hospital, successor)
                 if not successor.prefs:
